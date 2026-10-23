@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+  font-family: "Hanken Grotesk", sans-serif;
+  position: relative;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html body {
+  margin: 0;
+  color: #3C3C31;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  height: 100%;
+  transition: 0.3s;
+  font-family: "Hanken Grotes";
+  background:  #FFFEFB;;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    height: 20px;
+    width: 20px;
+    background: $color-gray;
+    border-radius: 50%;
+    display: block;
+    @include media ("<=phone"){
+        display: none;
+    }
+
+  }
+
+  .home-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1D1D1D;;
+
+    .load-words {
+        position: relative;
+        width: 700px;
+        overflow: hidden;
+        height: 50px;
+
+        h1 {
+            margin: 0 auto;
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Hanken Grotesk";
+            font-weight: 500;
+            transform: translateY(110%);
+            color: white;
+            @include media("<=mobile"){
+                font-size:20px ;
+            }
+        }
+
+    }
+
+    .load-bar {
+        // border: 1px solid white;
+        width: 250px;
+        height: 10px;
+        margin: 20px;
+        position: relative;
+        background: #8E8E8E;
+
+        .loading-bar {
+            position: absolute;
+            left: 0;
+            background: white;
+            width: 0%;
+            height: 100%;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+    }
+
+}
+
+.exit-h1 {
+    overflow: hidden;
+}
+
+.exit-transition {
+    position: fixed;
+    background: #FFFEFB;
+    // background: black;
+    height: 100vh;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #1D1D1D;
+        font-family:"Hanken Grotesk";
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 50px; 
+        letter-spacing: -1.26px;
+        @include media("<=mobile"){
+            font-size:30px ;
+        }
+        @include media("<=phone"){
+            font-size:25px ;
+        }
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+
+
+  .navbar{
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    padding:2rem 6rem;
+    position: fixed;
+    top:0;
+    background-color: #FFFEFB;
+    z-index: 2;
+    @include media ("<=phone"){
+        padding:2rem 2rem;
+    }
+
+    .nav-left{
+        
+      
+        .logo{
+            a{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -0.54px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+
+    }
+    .nav-right{
+        
+        
+
+        .nav-links{
+            color: #1D1D1D;
+            font-family: "Hanken Grotesk";
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.51px;
+            text-transform: uppercase;
+            display: flex;
+            a{
+                @extend %link--hidden;
+                text-decoration: none;
+                color: #1D1D1D;
+                margin: 0 2rem;
+            }
+            .menu-container{
+                display: flex;
+                align-items: center;
+                a{
+                    @extend %link--hidden;
+                }
+                #menuToggle{
+                    display: flex;
+                    align-items: center;
+                    color: #1D1D1D;
+                    font-family: "Hanken Grotesk";
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.39px;
+                    text-transform: uppercase;
+                    @extend %link--hidden;
+                }
+            }
+            @include media ("<=tablet"){
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 2rem;
+            }
+
+        }
+
+    }
+
+  }
+
+
+  .menu {
+    // @extend %cover;
+  
+    background: #1D1D1D;;
+    color: #BBBBBB;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  
+    height: 0vh;
+    .navbar{
+        background: transparent;
+        .logo{
+            a{
+                color: #FFFEFB;
+            }
+        }
+        .nav-right{
+            .nav-links {
+                .menu-container{
+                    #menuToggle{
+                        color:#FFFEFB;
+                    }
+        
+                }
+
+            }
+
+        } 
+
+
+    }
+  }
+  
+  .menu__wrapper {
+    height: 100%;
+  
+    display: none;
+    flex-direction: column;
+  
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  
+      height: 88%;
+  
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+  
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding-inline-start: 0;
+        }
+  
+        li {
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+  
+          // + li {
+          //   // margin-top: 30px;
+          // }
+  
+          a {
+            // font-size: 11vw;
+            @extend %menu--link--hidden;
+            text-decoration: none;
+            color: #BBB;
+            font-family: "Hanken Grotesk";
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; 
+            letter-spacing: -1.26px;
+            margin-bottom: 32px;
+            overflow: hidden;
+            display: inline-block;
+            transform: translateY(150%);
+  
+            span {
+              position: relative;
+              margin: 0;
+              padding: 0;
+            }
+            &:hover{
+                color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .menu-bottom{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top:3rem;
+
+        @include media ("<=phone"){
+            flex-wrap: wrap;
+        }
+        .social-link{
+            display: flex;
+            padding: 5px 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            border: 1px solid #8E8E8E;
+            transition: all 0.5s;
+            a{
+                text-decoration: none;
+                color: #8E8E8E;
+                font-family: "Hanken Grotesk";
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -0.51px;
+                text-transform: uppercase;
+
+
+            }
+        }
+            .email-link:hover{
+                background-color: #FF964F;
+                color: #fff ;
+                border: 1px solid transparent;
+                .email{
+                    color: #fff;
+                }
+            }
+            .linkedin-link:hover{
+                background-color: #11BEBE;
+                color: #fff ;
+                border: 1px solid transparent;
+                .linkedin{
+                    color: #fff;
+                }
+            }
+            .github-link:hover{
+                background-color: #FFFFFF;
+                color: #fff ;
+                border: 1px solid transparent;
+                .github{
+                    color: #1D1D1D;
+                }
+            }
+            .twitter-link:hover{
+                background-color: #6C8DFA;
+                color: #fff ;
+                border: 1px solid transparent;
+                .twitter{
+                    color: #fff;
+                }
+            }
+            .instagram-link:hover{
+                background:linear-gradient(151deg, #FF964F 6.18%, #F4ED6C 52.57%, #6C8DFA 101.86%);
+                color: #fff ;
+                border: 1px solid transparent;
+                .instagram{
+                    color: #fff;
+                }
+            }
+
+
+        
+
+    }
+  }
+
+  .underlined-words{
+    text-decoration-line: underline;
+    margin-right: 4rem;
+
+    h4{
+        color: #1D1D1D;
+        font-family: "Hanken Grotesk";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; 
+        letter-spacing: -0.39px;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+    }
+}
+
+.footer{
+    width:94%;
+    margin: 5rem auto;
+
+    .footer-top{
+        width:80%;
+        .footer-header{
+            padding:2rem 0;
+
+            h1{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 50px; 
+                letter-spacing: -1.26px;
+            }
+        }
+        .footer-text{
+            width:65%;
+
+            @include media ("<=tablet"){
+                width:100%;
+            }
+            
+
+            p{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.51px;
+                padding-top:1rem;
+                a{
+                    @extend %link--hidden;
+                    text-decoration: none;
+                    color: #8E8E8E;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.51px;
+                    vertical-align: text-bottom;
+
+                }
+            }
+
+        }
+
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-top:3rem;
+        .footer-links{
+            display: flex;
+            gap:2rem;
+
+            @include media ("<=phone"){
+                flex-wrap: wrap;
+            }
+            
+
+            .social-link{
+                display: flex;
+                padding: 5px 10px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 25px;
+                border: 1px solid #8E8E8E;
+                transition: all 0.5s;
+                a{
+                    text-decoration: none;
+                    color: #8E8E8E;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.51px;
+                    text-transform: uppercase;
+                    
+                }
+            }
+            .email-link:hover{
+                background-color: #FF964F;
+                color: #fff ;
+                border: 1px solid transparent;
+                .email{
+                    color: #fff;
+                }
+            }
+            .linkedin-link:hover{
+                background-color: #11BEBE;
+                color: #fff ;
+                border: 1px solid transparent;
+                .linkedin{
+                    color: #fff;
+                }
+            }
+            .github-link:hover{
+                background-color: #FFFFFF;
+                color: #fff ;
+                border: 1px solid transparent;
+                .github{
+                    color: #1D1D1D;
+                }
+            }
+            .twitter-link:hover{
+                background-color: #6C8DFA;
+                color: #fff ;
+                border: 1px solid transparent;
+                .twitter{
+                    color: #fff;
+                }
+            }
+            .instagram-link:hover{
+                background:linear-gradient(151deg, #FF964F 6.18%, #F4ED6C 52.57%, #6C8DFA 101.86%);
+                color: #fff ;
+                border: 1px solid transparent;
+                .instagram{
+                    color: #fff;
+                }
+            }
+        }
+        .design-by{
+
+            @include media ("<=phone"){
+                display: none;
+            }
+            p{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; 
+                letter-spacing: -0.51px;
+
+                .grey-p{
+                    color: #8E8E8E;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.51px;
+                    a{
+                        color: #8E8E8E;
+                        font-family: "Hanken Grotesk";
+                        font-size: 17px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: -0.51px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+

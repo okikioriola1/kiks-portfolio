@@ -1,0 +1,337 @@
+
+.about{
+    display: flex;
+    margin: 15rem auto 0 auto;
+    width: 94%;
+
+    @include media("<=mobile"){
+        flex-direction: column;
+        gap:2.5rem;
+    }
+
+
+    .left{
+        .underlined-words{
+            text-decoration-line: underline;
+            margin-right: 4rem;
+            @include media("<=mobile"){
+                width:38%;
+            }
+            
+
+            h4{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; 
+                letter-spacing: -0.39px;
+                text-decoration-line: underline;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+    .center{
+        flex-basis: 80%;
+        // justify-content: center;
+        // display: flex;
+        position: relative;
+        overflow: hidden;
+        margin-left: 10rem;
+        @include media("<=tablet"){
+            margin: 0;
+        }
+        .hero-word-container{
+            position: relative;
+            overflow: hidden;
+
+            h1{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 120px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 134px;
+                letter-spacing: -4.2px;
+                overflow: hidden;
+                @include media("<=md"){
+                    font-size: 90px;
+                    line-height: 80px;
+
+                }
+                @include media("<=tablet"){
+                    font-size: 60px;
+                    line-height: 60px;
+
+                }
+            }
+
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        .hero-right{
+            width:70%;
+            margin:0 auto;
+            @include media("<=tablet"){
+                width: 100%;
+                margin: 0;
+            }
+            @include media("<=tablet"){
+                width: 70%;
+            }
+            h2{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.51px;
+                text-transform: uppercase;
+
+            }
+        }
+
+    }
+}
+
+
+.about-info{
+    width:94%;
+    margin: 8rem auto;
+
+    .about-info-wrapper{
+        width:80%;
+        margin:auto;
+        display: flex;
+        gap:4rem;
+
+        @include media("<=tablet"){
+            flex-direction: column;
+            
+            
+        }
+
+        .about-image{
+
+            @include media("<=tablet"){
+                width:100%;
+                
+                
+            }
+            img{
+                @include media("<=tablet"){
+                    width:100%;
+                    
+                    
+                }
+            }
+
+        }
+        .info{
+            .header{
+
+                h1{
+                    color: #1D1D1D;
+                    font-family: "Hanken Grotesk";
+                    font-size: 42px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 50px; 
+                    letter-spacing: -1.26px;
+                }
+
+            }
+            .text{
+                p{
+                    color: #1D1D1D;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.51px;
+                    padding-top:1rem;
+                }
+
+                .grey-p{
+                    color: #8E8E8E;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; 
+                    letter-spacing: -0.51px;
+                @include media("<=mobile"){
+                    font-size:17px;
+                }
+
+                }
+            }
+        }
+    }
+}
+
+.tools-section{
+    width:94%;
+    margin: 7rem auto 7rem auto;
+
+
+    .tools{
+        position: relative;
+        overflow: hidden;
+        margin-top:2.5rem;
+
+        .hero-word-container{
+            position: relative;
+            overflow: hidden;
+
+            h1{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 50px;
+                letter-spacing: -1.26px;
+                @include media("<=md"){
+                    font-size: 30px;
+                    line-height: 50px;
+
+                }
+                @include media("<=tablet"){
+                    font-size: 20px;
+                    line-height: 50px;
+
+                }
+                @include media("<=mobile"){
+                    font-size: 16px;
+                    line-height: 40px;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+.work-experience-section{
+    width:94%;
+    margin:7rem auto 7rem auto;
+
+
+    .work-experience{
+        width:90%;
+        margin:auto;
+
+        .work{
+            height:80px;
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #BBBBBB;
+            margin: 3rem 0;
+
+            @include media("<=tablet"){
+                height:100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-bottom:2rem
+                
+                
+                
+            }
+
+            .number{
+                width:25%;
+                p{
+                    color: #1D1D1D;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; /* 141.176% */
+                    letter-spacing: -0.51px;
+                    text-transform: uppercase;
+
+                }
+            }
+            .company{
+                width: 40%;
+                h1{
+                    color: #1D1D1D;
+                    font-family: "Hanken Grotesk";
+                    font-size: 42px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 50px;
+                    letter-spacing: -1.26px;
+                    @include media("<=mobile"){
+                        font-size: 24px;
+                        line-height: 40px;
+    
+                    }
+                }
+            }
+            .duration{
+                h4{
+                    color: #1D1D1D;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.51px;
+                    @include media("<=tablet"){
+                        font-size: 14px;
+                      
+    
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner{
+    width:100%;
+    margin:5rem 0;
+    .banner-image{
+        width:90%;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        img{
+            width:100%;
+            height:100%;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+        
+    }
+
+    .banner-text{
+        width:55%;
+        margin: 6rem auto 0 auto;
+
+        @include media ("<=mobile"){
+            width:85%;
+        }
+        p{
+            color: #1D1D1D;
+            font-family: "Hanken Grotesk";
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.51px;
+            padding-top: 1rem;
+        }
+        
+    }
+}

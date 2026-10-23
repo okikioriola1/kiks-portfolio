@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiks</title>
+  </head>
+  <body data-barba="wrapper">
+    <div class="cursor"></div>
+
+    <div class="exit-transition">
+      <h1 class="exit-h1">
+        <span class="exit-span" id="exitText">Get to know me :)</span>
+      </h1>
+    </div>
+
+    <!-- Loader -->
+    <div class="home-loader" id="homeLoader">
+      <div class="load-bar">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="load-words">
+        <h1 class="word1">
+          <span>Oh Hey There</span>
+        </h1>
+        <h1 class="word2">
+          <span>Just tidying up some stuff</span>
+        </h1>
+        <h1 class="word3">
+          <span>No need to fret, we are almost done</span>
+        </h1>
+        <h1 class="word4">
+          <span>You are now being granted entrance</span>
+        </h1>
+        <h1 class="word5">
+          <span>Welcome</span>
+        </h1>
+      </div>
+    </div>
+    <!-- end loader -->
+
+    <main data-barba="container" data-barba-namespace="home">
+      <!-- Menu Section -->
+
+      <section class="menu" id="fullpageMenu">
+        <div class="menu__wrapper" id="fullpageMenuInner">
+          <div class="navbar">
+            <div class="nav-left">
+              <div class="logo">
+                <a href="#" id="indexLink">
+                  Okiki <br />
+                  Oriola</a
+                >
+              </div>
+            </div>
+            <div class="nav-right">
+              <div class="nav-links">
+                <div class="menu-container">
+                  <a id="menuToggle"
+                    >Close
+                    <img src="assets/icons/close-icon.svg" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content" id="contentMenuInner">
+            <div class="content__wrapper">
+              <ul>
+                <li>
+                  <a href="/about.html" id="word">
+                    <span>About</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/projects.html" id="word2">
+                    <span>Projects </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://drive.google.com/file/d/1XYf_ZixMV2_64oG6Oqn4TP1eSx36dlEh/view?usp=drive_link"
+                    target="_blank"
+                    id="word3"
+                  >
+                    <span>Resume</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-bottom">
+              <div class="social-link email-link">
+                <a class="email" href="mailto:okikioriola1@gmail.com">Email</a>
+              </div>
+              <div class="social-link linkedin-link">
+                <a
+                  class="linkedin"
+                  href="https://www.linkedin.com/in/okikijesu-oriola-b0b296197"
+                  >LinkedIn</a
+                >
+              </div>
+              <div class="social-link github-link">
+                <a class="github" href="https://github.com/okikioriola1"
+                  >Github</a
+                >
+              </div>
+              <div class="social-link twitter-link">
+                <a class="twitter" href="https://twitter.com/young_okj"
+                  >Twitter</a
+                >
+              </div>
+              <div class="social-link instagram-link">
+                <a class="instagram" href="https://www.instagram.com/young_okj/"
+                  >Instagram</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End of Menu Section -->
+
+      <nav class="navbar">
+        <div class="nav-left">
+          <div class="logo">
+            <a>
+              Okiki <br />
+              Oriola</a
+            >
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a
+              href="https://drive.google.com/file/d/1XYf_ZixMV2_64oG6Oqn4TP1eSx36dlEh/view?usp=drive_link"
+              target="_blank"
+              >Resume</a
+            >
+            <a
+              href="mailto:okikioriola1@gmail.com?subject=subject text"
+              target="_blank"
+              >Contact</a
+            >
+            <div class="menu-container">
+              <a id="menuToggle"
+                >Menu
+                <img src="assets/icons/menu-icon.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- start of home section -->
+
+      <section class="hero" id="hero">
+        <div class="left">
+          <div class="underlined-words">
+            <h4 data-animation="slideIn">
+              Bringing your ideation to Life with Code and Creativity
+            </h4>
+          </div>
+        </div>
+
+        <div class="center">
+          <div class="hero-word-container">
+            <h1 id="hero-text-1">Hello. I am</h1>
+          </div>
+          <div class="hero-word-container">
+            <h1 id="hero-text-2">Okiki Oriola</h1>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="hero-right">
+            <h2 data-animation="paragraph">
+              Front-End Developer and Technical product specialist based in
+              Lagos, Nigeria.
+            </h2>
+          </div>
+        </div>
+      </section>
+      <!-- end of home section -->
+
+      <!-- start of banner section -->
+
+      <section class="banner">
+        <div class="banner-image">
+          <img data-animation="img" src="assets/images/hero-banner.png" />
+        </div>
+      </section>
+
+      <!-- end of banner section -->
+
+      <section class="crafting">
+        <div class="crafting-wrapper">
+          <div class="left">
+            <h1 data-animation="header">
+              Crafting Seamless User Experiences with Code and Creativity.
+            </h1>
+
+            <img src="assets/images/create-img.png" />
+          </div>
+
+          <div class="right">
+            <div class="hero-text-wrapper desktop">
+              <p id="hero-p">
+                Hi, I'm Okiki,a passionate Front End Engineer and Technical
+                Product Specialist with a keen eye for creating exceptional user
+                experiences.
+              </p>
+
+              <p id="hero-p">
+                With expert <span class="grey-p">technical skills</span> and a
+                strong understanding of web design principles and product
+                development, I excel at transforming beautiful designs into
+                functional and user-friendly interfaces. I take great pride in
+                my ability to
+                <span class="grey-p">meticulously translate every pixel</span>
+                of a design into clean and responsive code. My attention to
+                details extends to crafting smooth animations and ensuring
+                perfect alignment of elements,knowing that the smallest details
+                can significantly impact the overall user
+                <span class="grey-p">experience</span>.
+              </p>
+              <p>
+                What distinguishes me is my role as a Technical Product
+                Specialist. Beyond coding, I have a knack for diving into the
+                intricacies of a
+                <span class="grey-p">product's architecture</span>, making sense
+                of the user journey, and utilizing
+                <span class="grey-p">technical solutions</span> to enhance its
+                functionality and usability.
+              </p>
+
+              <p id="hero-p">
+                Skilled in front-end technologies including
+                <span class="grey-p">HTML</span> ,
+                <span class="grey-p">CSS</span>, and
+                <span class="grey-p">JavaScript</span>, modern frameworks like
+                <span class="grey-p">React</span> and
+                <span class="grey-p">Next js</span>, empowering me to build
+                interactive and dynamic web applications that accelerate product
+                adoption and utilize my technical advantage to drive user
+                success.
+              </p>
+            </div>
+            <div class="hero-text-wrapper phone">
+              <p>
+                Hi, I'm Okiki, a passionate Front End Engineer and <span class="grey-p">Technical
+                Product specialist</span>. With a solid grasp of web design principles
+                and technical expertise, I thrive at turning beautiful designs
+                into practical, user-friendly interfaces. My <span class="grey-p">meticulous
+                attention to detail</span> ensures that I transform every pixel into
+                clean, responsive code.
+              </p>
+              <p>
+                What sets me apart is my dual role as a technical product
+                specialist. Beyond coding, <span class="grey-p">I possess a knack for dissecting a
+                product's architecture</span>, and applying technical solutions to
+                enhance functionality and usability. Proficient in front-end
+                technologies like <span class="grey-p"></span>HTML, CSS, JavaScript, React, and Next.js</span>, as
+                well as essential soft skills like communication and
+                problem-solving, I'm equipped to create dynamic web applications
+                that boost product adoption, leveraging my <span class="grey-p">technical expertise</span>
+                to drive user success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start of featured projects -->
+
+      <section class="featured-projects">
+        <div class="underlined-words">
+          <h4>Featured Projects</h4>
+        </div>
+
+        <div class="projects">
+          <div class="project-top">
+            <div class="single-project">
+              <div class="project-banner">
+                <div class="overlay">
+                  <div class="view-site">
+                    <a
+                      href="https://logistics-dashboard-black.vercel.app"
+                      target="_blank"
+                      >VIEW LIVE SITE</a
+                    >
+                  </div>
+                </div>
+                <img src="assets/images/kiki-logistics.png" />
+              </div>
+              <div class="project-text">
+                <div class="left">
+                  <h1>Kiki Logistics</h1>
+                </div>
+                <div class="right">
+                  <p>Logistics app dashboard system</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="single-project">
+              <div class="project-banner evo">
+                <div class="overlay">
+                  <div class="view-site">
+                    <a
+                      href="https://gym-app-eight-beta.vercel.app/"
+                      target="_blank"
+                      >VIEW LIVE SITE</a
+                    >
+                  </div>
+                </div>
+                <img src="assets/images/evo-gym.png" />
+              </div>
+              <div class="project-text">
+                <div class="left">
+                  <h1>EvoGym</h1>
+                </div>
+                <div class="right">
+                  <p>A fitness App</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-top">
+            <div class="single-project">
+              <div class="project-banner">
+                <div class="overlay">
+                  <div class="view-site">
+                    <a href="https://spendituree.vercel.app/" target="_blank"
+                      >VIEW LIVE SITE</a
+                    >
+                  </div>
+                </div>
+                <img src="assets/images/spenditure.png" />
+              </div>
+              <div class="project-text">
+                <div class="left">
+                  <h1>Spenditure</h1>
+                </div>
+                <div class="right">
+                  <p>
+                    A simplified way to take charge and control your finances
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="single-project">
+              <div class="project-banner">
+                <div class="overlay">
+                  <div class="view-site">
+                    <a href="https://skin-buddy.vercel.app/">VIEW LIVE SITE</a>
+                  </div>
+                </div>
+                <img src="assets/images/skin-buddy.png" />
+              </div>
+              <div class="project-text">
+                <div class="left">
+                  <h1>Skin Buddy</h1>
+                </div>
+                <div class="right">
+                  <p>Get your desired skin</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End of featured projects -->
+
+      <!-- Start of collaborated projects -->
+
+      <section class="collaboration">
+        <div class="collaboration-text">
+          <p data-animation="paragraph">
+            Collaboration is at the core of my work philosophy. I thrive in
+            cross-functional teams, where I can actively engage with designers,
+            back-end developers, and stakeholders to deliver cohesive and
+            polished digital solutions. I believe that fostering effective
+            communication and understanding project requirements are vital to
+            delivering exceptional results.
+          </p>
+        </div>
+      </section>
+
+      <section class="creativity-section">
+        <div class="creativity-wrapper" aria-hidden="true" ref="inner">
+          <div id="scroll-text">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+        </div>
+
+        <div class="creativity-wrapper-2" aria-hidden="true" ref="inner">
+          <div id="scroll-text-2">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text-2">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text-2">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text-2">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text-2">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+          <div id="scroll-text-2">
+            Creativity, Code
+            <div class="bar"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End of featured projects -->
+
+      <!-- Start of Footer projects -->
+
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-header">
+            <h1>let’s collaborate.</h1>
+          </div>
+          <div class="footer-text">
+            <p>
+              Hey there! Ready to embark on an epic coding journey together?
+              Whether you have a project idea, need web assistance, or just want
+              to chat about code, I'm all ears!
+              <span
+                ><a href="#"
+                  >Contact me<span
+                    ><img src="assets/icons/footer-icon.svg" /></span></a
+              ></span>
+              to start crafting digital magic together!
+            </p>
+            <p></p>
+
+            <p>
+              Oh, and by the way, if you're a football fan like me, let's take a
+              break from coding and geek out over our favorite football clubs
+              and players and also banter each other. Drop me a line, and we can
+              have a virtual coffee (or tea) while chatting about code and the
+              fantastic world of football. Can't wait to hear from you!
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-links">
+            <div class="social-link email-link">
+              <a class="email" href="mailto:okikioriola1@gmail.com">Email</a>
+            </div>
+            <div class="social-link linkedin-link">
+              <a
+                class="linkedin"
+                href="https://www.linkedin.com/in/okikijesu-oriola-b0b296197"
+                >LinkedIn</a
+              >
+            </div>
+            <div class="social-link github-link">
+              <a class="github" href="https://github.com/okikioriola1"
+                >Github</a
+              >
+            </div>
+            <div class="social-link twitter-link">
+              <a class="twitter" href="https://twitter.com/young_okj"
+                >Twitter</a
+              >
+            </div>
+            <div class="social-link instagram-link">
+              <a class="instagram" href="https://www.instagram.com/young_okj/"
+                >Instagram</a
+              >
+            </div>
+          </div>
+          <div class="design-by">
+            <p>
+              Design by
+              <span class="grey-p"
+                ><a href="mailto:ebubeeneh@gmail.com">Ebube</a></span
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer projects -->
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

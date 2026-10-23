@@ -1,0 +1,475 @@
+.hero{
+    // display: none;
+    display: flex;
+    margin: 15rem auto 0 auto;
+    width: 94%;
+
+    @include media("<=mobile"){
+        flex-direction: column;
+        gap:2.5rem;
+    }
+
+
+    .left{
+        .underlined-words{
+            text-decoration-line: underline;
+            margin-right: 4rem;
+            @include media("<=mobile"){
+                width:38%;
+            }
+            
+
+            h4{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; 
+                letter-spacing: -0.39px;
+                text-decoration-line: underline;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+    .center{
+        flex-basis: 80%;
+        // justify-content: center;
+        // display: flex;
+        position: relative;
+        overflow: hidden;
+        .hero-word-container{
+            position: relative;
+            overflow: hidden;
+
+            h1{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 120px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100px;
+                letter-spacing: -4.2px;
+                overflow: hidden;
+                @include media("<=md"){
+                    font-size: 90px;
+                    line-height: 80px;
+
+                }
+                @include media("<=tablet"){
+                    font-size: 60px;
+                    line-height: 60px;
+
+                }
+            }
+
+        }
+    }
+    .right{
+        display: flex;
+        align-items: flex-end;
+        .hero-right{
+            width:70%;
+            margin:0 auto;
+            @include media("<=tablet"){
+                width: 100%;
+                margin: 0;
+            }
+            @include media("<=tablet"){
+                width: 70%;
+            }
+            h2{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.51px;
+                text-transform: uppercase;
+
+            }
+        }
+
+    }
+}
+.banner{
+    width:100%;
+    margin-top:5rem;
+    // display: none;
+    .banner-image{
+        width:90%;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        img{
+            width:100%;
+            height:100%;
+        }
+        
+    }
+}
+
+.crafting{
+    width:100%;
+    margin-top: 8rem;
+    .crafting-wrapper{
+        width:90%;
+        margin:auto;
+        display: flex;
+        gap:7rem;
+        @include media("<=tablet"){
+            gap: 2rem;
+        }
+        @include media("<=mobile"){
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .left{
+            margin-left: 3rem;
+
+            h1{
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 50px; 
+                letter-spacing: -1.26px;
+            }
+            img{
+               
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+                margin-top: 3rem;
+                @include media("<=mobile"){
+                   display: block;
+                   width:50%;
+                   margin:3rem 0;
+                }
+                  
+            }
+
+
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .hero-text-wrapper{
+                width:90%;
+                margin:auto;
+                position: relative;
+                overflow: hidden;
+                @include media("<=tablet"){
+                    width: 100%;
+                }
+                @include media("<=mobile"){
+                    margin-top:2rem;
+                }
+
+            
+            
+            p{
+                width:70%;
+                color: #1D1D1D;
+                font-family: "Hanken Grotesk";
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; 
+                letter-spacing: -0.51px;
+                margin:auto;
+                padding-top:1rem;
+                @include media("<=mobile"){
+                    font-size:22px;
+                    width: 80%;
+                }
+                @include media("<=phone"){
+                    font-size:18px;
+                    width:87%
+                }
+
+                .grey-p{
+                    color: #8E8E8E;
+                    font-family: "Hanken Grotesk";
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; 
+                    letter-spacing: -0.51px;
+                @include media("<=mobile"){
+                    font-size:22px;
+                }
+                @include media("<=phone"){
+                    font-size:18px;
+                }
+
+                }
+            }
+        }
+        .desktop{
+            @include media("<=phone"){
+                display: none;
+            }
+
+        }
+        .phone{
+            display: none;
+            @include media("<=phone"){
+                display: block;
+            }
+
+        }
+
+        }
+    }
+}
+
+
+.featured-projects{
+    margin: 7rem 0;
+    .underlined-words{
+        margin-left:4rem;
+        padding: 3rem 0;
+    }
+
+
+    .projects{
+        width:94%;
+        margin: auto;
+
+        .project-top{
+            display: flex;
+            gap:4rem;
+             margin-top:3rem;
+             @include media("<=mobile"){
+                flex-direction: column;
+            }
+
+            .single-project{
+                width:50%;
+                position: relative;
+                @include media("<=mobile"){
+                    width:100%;
+                }
+                .evo{
+                    background-color: #FFE1E0;
+                }
+                .korrect{
+                    background-color: #039ac4;
+                }
+
+                .project-banner{
+                    width:100%;
+                    position: relative;
+                    border-radius: 10px;
+
+                    .overlay{
+                        position: absolute;
+                        width:100%;
+                        height:100%;
+                        background-color: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all 0.5s;
+                        opacity: 0;
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                        .view-site{
+                            width:120px;
+                            height:120px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            border: 1px solid transparent;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        a{
+                            @extend %link--hidden;
+                            text-decoration: none;
+                            color: #1D1D1D;
+                            text-align: center;
+                            font-family: "Hanken Grotesk";
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; 
+                            letter-spacing: -0.51px;
+                        }
+                    }
+
+    
+
+                    }
+
+                    img{
+                        width:100%;
+                    }
+
+                }
+                .project-text{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top:1rem;
+                    width:95%;
+                    margin:auto;
+
+                    .left{
+                        h1{
+                            color: #1D1D1D;
+                            font-family:"Hanken Grotesk";
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; 
+                            letter-spacing: -0.51px;
+                            @include media("<=tablet"){
+                                font-size: 13px;
+                            }
+                        }
+
+                    }
+                    .right{
+                        display: flex;
+                        justify-content: flex-end;
+                        text-align: right;
+                        p{
+                            color: #8E8E8E;
+                            font-family: "Hanken Grotesk";
+                            font-size: 17px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px; 
+                            letter-spacing: -0.51px;
+                            @include media("<=tablet"){
+                                font-size: 13px;
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+
+
+
+}
+
+.collaboration{
+    margin: 5rem 0;
+
+    .collaboration-text{
+        text-align: center;
+        width:70%;
+        margin:auto;
+        p{
+            color: #8E8E8E;
+            text-align: center;
+            font-family: "Hanken Grotesk";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px; 
+            letter-spacing: -0.96px;
+
+            @include media ("<=phone"){
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.creativity-section{
+    width:100%;
+    margin:7rem 0 0 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .creativity-wrapper{
+        width:100%;
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: row;
+        flex: auto;
+        #scroll-text{
+            flex-shrink:0;
+            margin-right:5rem;
+            color: #1D1D1D;
+            font-family: "Hanken Grotesk";
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120px; 
+            letter-spacing: -4.2px;
+            display: flex;
+            align-items: center;
+            @include media("<=mobile"){
+                font-size: 70px;
+                line-height: 100px;
+
+            }
+            .bar{
+                width: 280px;
+                height: 8px;
+                background-color: #8E8E8E;
+                margin-left: 3rem;
+                @include media("<=mobile"){
+                    width: 230px;
+                    height: 6px;
+    
+                }
+            }
+
+        }
+
+    }
+    .creativity-wrapper-2{
+        width:100%;
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: row;
+        flex: auto;
+        #scroll-text-2{
+            flex-shrink:0;
+            margin-right:5rem;
+            color: #1D1D1D;
+            font-family: "Hanken Grotesk";
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120px; 
+            letter-spacing: -4.2px;
+            display: flex;
+            align-items: center;
+            @include media("<=mobile"){
+                font-size: 70px;
+                line-height: 100px;
+
+            }
+            .bar{
+                width: 280px;
+                height: 8px;
+                background-color: #8E8E8E;
+                margin-left: 3rem;
+                @include media("<=mobile"){
+                    width: 230px;
+                    height: 6px;
+    
+                }
+            }
+        }
+
+    }
+
+}
+
