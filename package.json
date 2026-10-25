@@ -1,12 +1,13 @@
 {
-  "name": "new-portfolio",
+  "name": "kiks-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test"
   },
   "devDependencies": {
     "include-media": "^2.0.0",

@@ -1,6 +1,10 @@
 import "./style.scss";
 import { Cursor } from "./app/components/cursor";
 import { split } from "./app/animations/text";
+import { playIntro } from "./app/animations/intro";
+import { animateSelectedWork } from "./app/animations/selected-work";
+import { animateAbout } from "./app/animations/about";
+import { animateProjectGallery } from "./app/animations/project-gallery";
 // import Home from "./app/pages/home";
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
@@ -12,11 +16,34 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import barba from "@barba/core";
 gsap.registerPlugin(ScrollTrigger);
 
+// Page transitions own scroll positioning, including Back/Forward navigation.
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
+
+function resetPageScroll(container = document) {
+  const selector = '[data-barba="container"]';
+  const page = container.matches?.(selector) ? container : container.querySelector(selector);
+  if (!page || !["home", "about", "projects"].includes(page.dataset.barbaNamespace)) return;
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}
+
+// Also reset native page loads and restores from the browser's page cache.
+window.addEventListener("pageshow", () => {
+  resetPageScroll();
+  requestAnimationFrame(() => resetPageScroll());
+});
+
 window.onload = () => {
   localStorage.removeItem("pageloadcount");
 };
 
-split();
+const hasOpeningIntro = Boolean(document.querySelector(".kiks-intro"));
+split({
+  deferSlideIn: hasOpeningIntro ? ".hero [data-animation='slideIn']" : null,
+  deferImages: hasOpeningIntro ? ".hero + .banner [data-animation='img']" : null,
+  deferParagraphs: hasOpeningIntro ? ".hero [data-animation='paragraph']" : null,
+});
 function delay(n) {
   n = n || 2000;
   return new Promise((done) => {
@@ -119,7 +146,7 @@ class App {
 // //   }
 
 // //   menu() {
-// //     var menuToggles = document.querySelectorAll("#menuToggle");
+// //     var menuToggles = document.querySelectorAll("#menuToggle, [data-menu-toggle]");
 
 // //     var navtl = gsap.timeline();
 
@@ -309,36 +336,27 @@ class App {
 
  new App();
 
-function moveTop(){
-  {
-    window.scrollTo(0, 0);
+let stopSelectedWork = () => {};
+let stopAbout = () => {};
+let stopProjectGallery = () => {};
+let pageTransitionReady = Promise.resolve();
 
-  }
-}
-
-
-function contentAnimation() {
-  
+function contentAnimation(container = document) {
+  stopSelectedWork();
+  stopAbout();
+  stopProjectGallery();
+  resetPageScroll(container);
+  stopSelectedWork = animateSelectedWork(container, pageTransitionReady);
+  stopAbout = animateAbout(container, pageTransitionReady);
+  stopProjectGallery = animateProjectGallery(container, pageTransitionReady);
 
   if (
     window.location.pathname === "/index.html" ||
     window.location.pathname === "/"
   ) {
     
-    moveTop();
     menu();
-    loader();
-
-  var herotl = gsap.timeline();
-
-    var heroptl = gsap.timeline();
-
-    herotl.from(["#hero-text-1", "#hero-text-2"], { opacity: 0, y: "100%", delay:12});
-    herotl.to(["#hero-text-1", "#hero-text-2"], {
-      y: "0%",
-      delay: 1,
-      opacity: 1,
-    })
+    playIntro();
 
     // heroptl.set("#hero-p", { y: "100%", delay: 0.9, opacity: 0 });
     // heroptl.to("#hero-p", { y: "0%", delay: 0.5, opacity: 1 });
@@ -379,7 +397,6 @@ function contentAnimation() {
     window.location.pathname === "/home"
   ) {
     
-    moveTop();
     menu();
     var herotl = gsap.timeline();
 
@@ -429,17 +446,8 @@ function contentAnimation() {
     window.location.pathname === "/about"
   ) {
     
-    moveTop();
     menu();
-    var herotl = gsap.timeline();
-    var heroptl = gsap.timeline();
-
-    herotl.set(["#hero-text-1", "#hero-text-2"], { opacity: 0, y: "100%" });
-    herotl.to(["#hero-text-1", "#hero-text-2"], {
-      y: "0%",
-      delay: 1,
-      opacity: 1,
-    });
+    // The profile module coordinates its entrance with the page transition.
   }
 
   if (
@@ -447,23 +455,14 @@ function contentAnimation() {
     window.location.pathname === "/projects"
   ) {
     
-    moveTop();
     menu();
-    var herotl = gsap.timeline();
-    var heroptl = gsap.timeline();
-
-    herotl.set(["#hero-text-1", "#hero-text-2"], { opacity: 0, y: "100%" });
-    herotl.to(["#hero-text-1", "#hero-text-2"], {
-      y: "0%",
-      delay: 1,
-      opacity: 1,
-    });
+    // The gallery module owns the hero entrance and scroll sequence.
   }
 
 }
 
 function menu() {
-  var menuToggles = document.querySelectorAll("#menuToggle");
+  var menuToggles = document.querySelectorAll("#menuToggle, [data-menu-toggle]");
 
   console.log('menu clicked')
 
@@ -503,100 +502,12 @@ function menu() {
   menuToggles.forEach((menuToggle) => {
     menuToggle.onclick = () => {
       navtl.reversed(!navtl.reversed());
+      menuToggles.forEach(toggle => {
+        if (toggle.hasAttribute("aria-expanded")) toggle.setAttribute("aria-expanded", String(!navtl.reversed()));
+      });
     };
   });
 }
-var tl = gsap.timeline();
-var loderTl = gsap.timeline();
-
-function loader() {
-
-
-  // (    window.location.pathname === "/index.html" ||
-  //   window.location.pathname === "/") 
-
-    loderTl.from(".load-bar", { delay: 0.5, opacity: 0, duration: 1 });
-    loderTl
-      .to(".word1", { duration: 0.7, y: "0%" })
-      .to(".word1", {
-        delay: 0.3,
-        duration: 0.5,
-        opacity: 0,
-      })
-      .to(".word2", { duration: 0.7, y: "0%" })
-      .to(".word2", {
-        delay: 0.7,
-        duration: 0.5,
-        opacity: 0,
-      })
-      .to(".word3", { duration: 0.7, y: "0%" })
-      .to(".word3", {
-        delay: 0.7,
-        duration: 0.5,
-        opacity: 0,
-      })
-      .to(".word4", { duration: 0.7, y: "0%" })
-      .to(".word4", {
-        delay: 0.7,
-        duration: 0.5,
-        opacity: 0,
-      })
-      .to(".word5", { duration: 0.7, y: "0%" })
-      .to(".word5", {
-        delay: 0.5,
-        duration: 0.5,
-        opacity: 0,
-      });
-
-    loderTl
-      .to(
-        ".loading-bar",
-        {
-          width: "30%",
-          duration: 4.5,
-          ease: "power4.out",
-        },
-        "-=9"
-      )
-      .to(
-        ".loading-bar",
-        {
-          width: "70%",
-          duration: 4.5,
-          ease: "power4.out",
-        },
-        "-=7"
-      )
-      .to(
-        ".loading-bar",
-        {
-          width: "100%",
-          duration: 4.5,
-          ease: "power4.out",
-        },
-        "-=4"
-      );
-    loderTl
-      .to([".load-words", ".load-bar"], { delay: 0, opacity: 0 })
-      .to(
-        ".home-loader",
-        {
-          delay: 0.9,
-          opacity: 0,
-          height: 0,
-          duration: 1,
-          ease: "Expo.easeInOut",
-        },
-        "-=1"
-      )
-   
-     
-   
-      tl.from([".hero", ".banner"], { display:'none', delay:11});
-      tl.to([".hero", ".banner"], { display:'flex' }); 
-
-}
-
 function pageTransition() {
   var tl = gsap.timeline();
   const element = document.getElementById("exitText");
@@ -799,7 +710,7 @@ function pageTransition() {
 
   }
 
-
+  return tl;
 }
 
 
@@ -809,21 +720,33 @@ barba.init({
 
   transitions: [
     {
+      beforeLeave() {
+        stopSelectedWork();
+        stopAbout();
+        stopProjectGallery();
+      },
       
       async leave(data) {
         const done = this.async();
 
-        pageTransition();
+        const curtain = pageTransition();
+        pageTransitionReady = new Promise(resolve => curtain.eventCallback("onComplete", resolve));
         await delay(1500);
         done();
       },
 
       async enter(data) {
-        contentAnimation();
+        contentAnimation(data.next.container);
       },
 
       async once(data) {
-        contentAnimation();
+        contentAnimation(data.next.container);
+      },
+
+      after(data) {
+        // In sync mode the outgoing page stays mounted during enter().
+        // Reset again once it is removed, while the curtain still covers the page.
+        resetPageScroll(data.next.container);
       },
     },
    

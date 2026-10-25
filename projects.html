@@ -5,7 +5,8 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiks</title>
+    <title>Projects — Okiki Oriola / Kiks</title>
+    <meta name="description" content="Featured software projects by Okiki Oriola: Onilé, Ledger, Kiki Logistics, Carquire, and Kiks Portfolio. Explore the demos, source code, and technologies." />
   </head>
   <body data-barba="wrapper">
     <div class="cursor"></div>
@@ -18,7 +19,7 @@
         </h1>
       </div>
 
-    <main data-barba="container" data-barba-namespace="home">
+    <main class="projects-page" data-barba="container" data-barba-namespace="projects">
       <section class="menu" id="fullpageMenu">
         <div class="menu__wrapper" id="fullpageMenuInner">
           <div class="navbar">
@@ -33,10 +34,10 @@
             <div class="nav-right">
               <div class="nav-links">
                 <div class="menu-container">
-                  <a id="menuToggle"
+                  <button type="button" data-menu-toggle aria-controls="fullpageMenu" aria-expanded="false"
                     >Close
-                    <img src="assets/icons/close-icon.svg" />
-                  </a>
+                    <img src="assets/icons/close-icon.svg" alt="" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -89,229 +90,102 @@
             <a href="https://drive.google.com/file/d/1XYf_ZixMV2_64oG6Oqn4TP1eSx36dlEh/view?usp=drive_link" target="_blank">Resume</a>
             <a href="mailto:okikioriola1@gmail.com?subject=subject text" target="_blank">Contact</a>
             <div class="menu-container">
-              <a id="menuToggle"
+              <button type="button" data-menu-toggle aria-controls="fullpageMenu" aria-expanded="false"
                 >Menu
-                <img src="assets/icons/menu-icon.svg" />
-              </a>
+                <img src="assets/icons/menu-icon.svg" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </nav>
 
-      <!-- Start of the project section -->
+      <header class="projects-intro">
+        <p class="projects-label" data-project-intro>Selected software / 05 projects</p>
+        <h1><span class="projects-title-line"><span>Featured</span></span><span class="projects-title-line"><span>projects.</span></span></h1>
+        <div class="projects-intro__bottom"><p>A few things I’ve built.<br />From product workflows to playful interfaces.</p><a href="#featured-projects">Explore the work <span aria-hidden="true">↘</span></a></div>
+      </header>
 
-      <!-- Start of the project hero section -->
-
-      <section class="project-section">
-        <div class="left">
-          <div class="underlined-words">
-            <h4 data-animation="slideIn">featured projects (2020 - 2023)</h4>
-          </div>
-        </div>
-
-        <div class="center">
-          <div class="hero-word-container">
-            <h1 id="hero-text-1">Explore My</h1>
-          </div>
-          <div class="hero-word-container">
-            <h1 id="hero-text-2">Web</h1>
-          </div>
-          <div class="hero-word-container">
-            <h1 id="hero-text-1">Sorcery</h1>
-          </div>
-        </div>
-
-        <div class="right">
-          <div class="hero-right">
-            <h2 data-animation="paragraph">
-              Showcasing My Enchanting Projects
-            </h2>
-          </div>
-        </div>
-      </section>
-
-      <!-- End of the projects hero section -->
-
-      <!-- Start of featured projects -->
-
-      <section class="featured-projects">
-
-        <div class="projects">
-          <div class="project-top">
-            <div class="single-project">
-              <div class="project-banner">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://logistics-dashboard-black.vercel.app" target="_blank">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/kiki-logistics.png" />
+      <section class="project-gallery" id="featured-projects" aria-labelledby="gallery-title">
+        <div class="project-gallery__stage">
+          <header class="project-gallery__header">
+            <div><p class="projects-label">The collection</p><h2 id="gallery-title">Featured projects <sup>(05)</sup></h2></div>
+            <a class="project-gallery__skip" href="#after-projects">Continue past projects <span aria-hidden="true">↓</span></a>
+          </header>
+          <div class="project-gallery__viewport" tabindex="0" aria-label="Featured projects gallery">
+            <div class="project-gallery__track">
+          <article class="work-project" aria-labelledby="onile-title">
+            <a class="work-project__visual work-project__visual--onile" href="https://onile-ng.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore the Onilé property marketplace demo (opens in a new tab)">
+              <div class="work-project__frame-label" aria-hidden="true"><span>Onilé</span><span>A place to call home.</span></div>
+              <div class="work-project__image-window">
+                <div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/onile-homepage.jpg" width="1920" height="1200" loading="lazy" decoding="async" alt="Onilé homepage with the Own your home headline, property preview, savings goal, and mortgage application status" /></div>
               </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Kiki Logistics</h1>
-                </div>
-                <div class="right">
-                  <p>Logistics app dashboard system</p>
-                </div>
-              </div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">01 / Property &amp; workflows</span><h3 id="onile-title">Onilé</h3></div>
+              <div class="work-project__summary"><p>A property marketplace prototype connecting buyer, seller, and admin workflows.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>TypeScript</li><li>Zustand</li></ul></div>
+              <div class="work-project__links"><a href="https://onile-ng.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View the Onilé demo (opens in a new tab)">View demo <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/onile-ng" target="_blank" rel="noopener noreferrer" aria-label="View Onilé on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
             </div>
+          </article>
 
-            <div class="single-project">
-              <div class="project-banner evo">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://gym-app-eight-beta.vercel.app/" target="_blank">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/evo-gym.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>EvoGym</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    A fitness App
-                  </p>
-                </div>
-              </div>
+          <article class="work-project" aria-labelledby="ledger-title">
+            <a class="work-project__visual work-project__visual--mainstack" href="https://mainstack-dashboard-eta.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore the Ledger dashboard demo (opens in a new tab)">
+              <div class="work-project__image-window"><div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/mainstack-dashboard.png" width="1440" height="1120" loading="lazy" decoding="async" alt="Ledger revenue dashboard with sample wallet balances, a revenue chart, and transactions" /></div></div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">02 / Data &amp; dashboards</span><h3 id="ledger-title">Ledger</h3></div>
+              <div class="work-project__summary"><p>A revenue dashboard bringing wallet summaries, charts, and transactions together.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>TypeScript</li><li>Recharts</li></ul></div>
+              <div class="work-project__links"><a href="https://mainstack-dashboard-eta.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View the Ledger demo (opens in a new tab)">View demo <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/mainstack-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Ledger on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="work-project" aria-labelledby="logistics-title">
+            <a class="work-project__visual work-project__visual--logistics" href="https://logistics-dashboard-black.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore the Kiki Logistics dashboard demo (opens in a new tab)">
+              <div class="work-project__image-window"><div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/kiki-logistics.png" width="636" height="581" loading="lazy" decoding="async" alt="Kiki Logistics dashboard concept showing shipment charts and a vehicle status list" /></div></div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">03 / Fleet &amp; operations</span><h3 id="logistics-title">Kiki Logistics</h3></div>
+              <div class="work-project__summary"><p>A logistics dashboard concept for fleet overview, vehicle status, and everyday operations.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>Chart.js</li><li>styled-components</li></ul></div>
+              <div class="work-project__links"><a href="https://logistics-dashboard-black.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View the Kiki Logistics demo (opens in a new tab)">View demo <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/logistics-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Kiki Logistics on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="work-project" aria-labelledby="carquire-title">
+            <a class="work-project__visual work-project__visual--carquire" href="https://carquire.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore Carquire (opens in a new tab)">
+              <div class="work-project__image-window"><div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/carquire-homepage.jpg" width="1920" height="1200" loading="lazy" decoding="async" alt="Carquire homepage, branded RoRo, with rental enquiry links and a blue car illustration" /></div></div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">04 / Mobility &amp; enquiries</span><h3 id="carquire-title">Carquire</h3></div>
+              <div class="work-project__summary"><p>A car rental enquiry concept with separate renter and vehicle-owner forms, built with React and TypeScript.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>TypeScript</li><li>React Hook Form</li></ul></div>
+              <div class="work-project__links"><a href="https://carquire.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View Carquire live (opens in a new tab)">View site <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/carquire" target="_blank" rel="noopener noreferrer" aria-label="View Carquire on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="work-project" aria-labelledby="portfolio-title">
+            <a class="work-project__visual work-project__visual--portfolio" href="https://kiks-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore Kiks Portfolio (opens in a new tab)">
+              <div class="work-project__image-window"><div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/kiks-portfolio-homepage.jpg" width="1920" height="1200" loading="lazy" decoding="async" alt="Okiki Oriola portfolio homepage with the software engineer introduction and grayscale portrait" /></div></div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">05 / Identity &amp; interaction</span><h3 id="portfolio-title">Kiks Portfolio</h3></div>
+              <div class="work-project__summary"><p>A personal portfolio combining responsive layouts, coordinated motion, and transitions between pages.</p><ul class="work-project__stack" aria-label="Technologies"><li>JavaScript</li><li>Sass</li><li>GSAP</li></ul></div>
+              <div class="work-project__links"><a href="https://kiks-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View Kiks Portfolio live (opens in a new tab)">View site <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/new-portfolio" target="_blank" rel="noopener noreferrer" aria-label="View Kiks Portfolio on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
             </div>
           </div>
-
-          <div class="project-top">
-            <div class="single-project">
-              <div class="project-banner">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://spendituree.vercel.app/">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/spenditure.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Spenditure</h1>
-                </div>
-                <div class="right">
-                  <p>A simplified way to take charge and control your finances</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="single-project">
-              <div class="project-banner korrect">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://korrectfly.vercel.app/" target="_blank">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/korrectfly.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>korrectfly</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    Book your flight tickets in one click.
-                  </p>
-                </div>
-              </div>
-            </div>
-            </div>
-
-            <div class="project-top">
-            <div class="single-project">
-              <div class="project-banner">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://skin-buddy.vercel.app/">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/skin-buddy.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Skin Buddy</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    Get your desired skin
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="single-project">
-              <div class="project-banner rock-paper">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://rock-paper-scissors-game-peach-six.vercel.app/">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/rock-paper-scissors.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Rock, Paper, Scissors</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    Rock Paper Scissors Game
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-            <div class="project-top">
-            <div class="single-project">
-              <div class="project-banner todo">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://todo-app-seven-orcin.vercel.app">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/todo-app.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Todo</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    Track your TODO'S easily
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="single-project">
-              <div class="project-banner get-set">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://get-set-play.vercel.app">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/get-set-play.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Get Set Play</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    A web 3 themed gaming site.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="project-gallery__navigation" hidden>
+            <span class="project-gallery__hint">Scroll to explore <span aria-hidden="true">→</span></span>
+            <div class="project-gallery__progress" role="progressbar" aria-label="Progress through projects" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <span class="project-gallery__count"><span data-gallery-current>01</span> / 05</span>
+            <div class="project-gallery__buttons"><button type="button" data-gallery-prev aria-label="Previous project" disabled>←</button><button type="button" data-gallery-next aria-label="Next project">→</button></div>
           </div>
         </div>
       </section>
+      <div id="after-projects" class="projects-after" tabindex="-1"><p>There’s more where that came from.</p><a href="https://github.com/okikioriola1?tab=repositories" target="_blank" rel="noopener noreferrer">Explore GitHub ↗<span class="projects-sr-only"> (opens in a new tab)</span></a></div>
 
       <footer class="footer">
         <div class="footer-top">
@@ -324,7 +198,7 @@
               Whether you have a project idea, need web assistance, or just want
               to chat about code, I'm all ears!
               <span
-                ><a href="#"
+                ><a href="mailto:okikioriola1@gmail.com"
                   >Contact me<span
                     ><img src="assets/icons/footer-icon.svg" /></span></a
               ></span>

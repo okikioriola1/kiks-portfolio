@@ -16,30 +16,35 @@
       </h1>
     </div>
 
-    <!-- Loader -->
-    <div class="home-loader" id="homeLoader">
-      <div class="load-bar">
-        <div class="loading-bar"></div>
+    <!-- Kiks opening sequence; hidden until JavaScript is ready. -->
+    <div class="kiks-intro" id="homeLoader" role="region" aria-label="Welcome to Kiks" hidden>
+      <div class="kiks-intro__panel kiks-intro__panel--top" aria-hidden="true"></div>
+      <div class="kiks-intro__panel kiks-intro__panel--bottom" aria-hidden="true"></div>
+
+      <div class="kiks-intro__top kiks-intro__detail" aria-hidden="true">
+        <span>Okiki Oriola<span class="kiks-intro__muted">An independent mind.</span></span>
+        <span class="kiks-intro__edition">Code. Curiosity. Craft.</span>
       </div>
-      <div class="load-words">
-        <h1 class="word1">
-          <span>Oh Hey There</span>
-        </h1>
-        <h1 class="word2">
-          <span>Just tidying up some stuff</span>
-        </h1>
-        <h1 class="word3">
-          <span>No need to fret, we are almost done</span>
-        </h1>
-        <h1 class="word4">
-          <span>You are now being granted entrance</span>
-        </h1>
-        <h1 class="word5">
-          <span>Welcome</span>
-        </h1>
+
+      <div class="kiks-intro__stage" aria-hidden="true">
+        <div class="kiks-intro__word-window">
+          <div class="kiks-intro__word">
+            <span class="kiks-intro__letter">K</span>
+            <span class="kiks-intro__letter kiks-intro__letter--i">ı<span class="kiks-intro__dot"></span></span>
+            <span class="kiks-intro__letter">k</span>
+            <span class="kiks-intro__letter">s</span>
+            <span class="kiks-intro__asterisk">✳</span>
+          </div>
+        </div>
+        <div class="kiks-intro__caption"><span class="kiks-intro__dash"></span>A little code. A lot of character.</div>
       </div>
+
+      <div class="kiks-intro__bottom">
+        <span class="kiks-intro__detail kiks-intro__note" aria-hidden="true">Thoughtfully built.<br /><span class="kiks-intro__muted">Right down to the introduction.</span></span>
+        <span class="kiks-intro__waiting" aria-hidden="true">Getting things ready<span class="kiks-intro__waiting-dot"></span></span>
+      </div>
+      <span class="kiks-intro__sr-only" role="status">Opening Kiks, the portfolio of Okiki Oriola.</span>
     </div>
-    <!-- end loader -->
 
     <main data-barba="container" data-barba-namespace="home">
       <!-- Menu Section -->
@@ -178,8 +183,8 @@
         <div class="right">
           <div class="hero-right">
             <h2 data-animation="paragraph">
-              Front-End Developer and Technical product specialist based in
-              Lagos, Nigeria.
+              Software engineer building thoughtful digital products—from complex
+              workflows to the details people interact with.
             </h2>
           </div>
         </div>
@@ -196,187 +201,96 @@
 
       <!-- end of banner section -->
 
-      <section class="crafting">
+      <section class="crafting crafting--intro" aria-labelledby="home-introduction-title">
         <div class="crafting-wrapper">
           <div class="left">
-            <h1 data-animation="header">
-              Crafting Seamless User Experiences with Code and Creativity.
-            </h1>
-
-            <img src="assets/images/create-img.png" />
+            <h2 id="home-introduction-title" data-animation="header">
+              Thoughtful engineering. Useful products.
+            </h2>
+            <img src="assets/images/create-img.png" alt="" loading="lazy" />
           </div>
 
           <div class="right">
-            <div class="hero-text-wrapper desktop">
-              <p id="hero-p">
-                Hi, I'm Okiki,a passionate Front End Engineer and Technical
-                Product Specialist with a keen eye for creating exceptional user
-                experiences.
+            <div class="hero-text-wrapper">
+              <p>
+                I’m Okiki, a software engineer who enjoys turning complex requirements
+                into products that feel straightforward to use. I work across
+                application logic, data, and interfaces, with an eye for how
+                everything fits together.
+              </p>
+              <p>
+                My experience in technical product work keeps me close to the
+                people using the software. It shapes how I approach problems:
+                understand the workflow, build a clear solution, and pay
+                attention to the details.
               </p>
 
-              <p id="hero-p">
-                With expert <span class="grey-p">technical skills</span> and a
-                strong understanding of web design principles and product
-                development, I excel at transforming beautiful designs into
-                functional and user-friendly interfaces. I take great pride in
-                my ability to
-                <span class="grey-p">meticulously translate every pixel</span>
-                of a design into clean and responsive code. My attention to
-                details extends to crafting smooth animations and ensuring
-                perfect alignment of elements,knowing that the smallest details
-                can significantly impact the overall user
-                <span class="grey-p">experience</span>.
-              </p>
-              <p>
-                What distinguishes me is my role as a Technical Product
-                Specialist. Beyond coding, I have a knack for diving into the
-                intricacies of a
-                <span class="grey-p">product's architecture</span>, making sense
-                of the user journey, and utilizing
-                <span class="grey-p">technical solutions</span> to enhance its
-                functionality and usability.
-              </p>
-
-              <p id="hero-p">
-                Skilled in front-end technologies including
-                <span class="grey-p">HTML</span> ,
-                <span class="grey-p">CSS</span>, and
-                <span class="grey-p">JavaScript</span>, modern frameworks like
-                <span class="grey-p">React</span> and
-                <span class="grey-p">Next js</span>, empowering me to build
-                interactive and dynamic web applications that accelerate product
-                adoption and utilize my technical advantage to drive user
-                success.
-              </p>
-            </div>
-            <div class="hero-text-wrapper phone">
-              <p>
-                Hi, I'm Okiki, a passionate Front End Engineer and <span class="grey-p">Technical
-                Product specialist</span>. With a solid grasp of web design principles
-                and technical expertise, I thrive at turning beautiful designs
-                into practical, user-friendly interfaces. My <span class="grey-p">meticulous
-                attention to detail</span> ensures that I transform every pixel into
-                clean, responsive code.
-              </p>
-              <p>
-                What sets me apart is my dual role as a technical product
-                specialist. Beyond coding, <span class="grey-p">I possess a knack for dissecting a
-                product's architecture</span>, and applying technical solutions to
-                enhance functionality and usability. Proficient in front-end
-                technologies like <span class="grey-p"></span>HTML, CSS, JavaScript, React, and Next.js</span>, as
-                well as essential soft skills like communication and
-                problem-solving, I'm equipped to create dynamic web applications
-                that boost product adoption, leveraging my <span class="grey-p">technical expertise</span>
-                to drive user success.
-              </p>
+              <dl class="home-experience" aria-label="Current roles">
+                <div><dt>Peerless</dt><dd>Senior Software Engineer</dd></div>
+                <div><dt>Paystack</dt><dd>Technical Product Specialist</dd></div>
+              </dl>
+              <a class="home-about-link" href="./about.html">More about me <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Start of featured projects -->
+      <section class="selected-work" id="selected-work" aria-labelledby="selected-work-title">
+        <header class="selected-work__header">
+          <div>
+            <p class="selected-work__eyebrow" data-work-heading><span class="selected-work__signal" aria-hidden="true"></span>A few things I've built</p>
+            <h2 class="selected-work__title" id="selected-work-title" data-work-heading>Selected <span>work.</span><sup>(03)</sup></h2>
+          </div>
+          <p class="selected-work__intro" data-work-heading>Property workflows, clearer data,<br /> and the details in between.</p>
+        </header>
+        <div class="selected-work__rule" data-work-rule aria-hidden="true"></div>
 
-      <section class="featured-projects">
-        <div class="underlined-words">
-          <h4>Featured Projects</h4>
+        <div class="selected-work__grid">
+          <article class="work-project work-project--lead" aria-labelledby="onile-title">
+            <a class="work-project__visual work-project__visual--onile" href="https://onile-ng.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore the Onilé property marketplace demo (opens in a new tab)">
+              <div class="work-project__frame-label" aria-hidden="true"><span>Onilé</span><span>A place to call home.</span></div>
+              <div class="work-project__image-window">
+                <div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/onile-homepage.jpg" width="1920" height="1200" loading="lazy" decoding="async" alt="Onilé homepage with the Own your home headline, property preview, savings goal, and mortgage application status" /></div>
+              </div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">01 / Property &amp; workflows</span><h3 id="onile-title">Onilé</h3></div>
+              <div class="work-project__summary"><p>A property marketplace prototype connecting buyer, seller, and admin workflows.</p><p class="work-project__contribution"><span>My contribution</span>Buyer, seller &amp; admin interfaces.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>TypeScript</li><li>Zustand</li></ul></div>
+              <div class="work-project__links"><a href="https://onile-ng.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View the Onilé demo (opens in a new tab)">View demo <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/onile-ng" target="_blank" rel="noopener noreferrer" aria-label="View Onilé on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="work-project" aria-labelledby="ledger-title">
+            <a class="work-project__visual work-project__visual--mainstack" href="https://mainstack-dashboard-eta.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore the Ledger dashboard demo (opens in a new tab)">
+              <div class="work-project__image-window"><div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/mainstack-dashboard.png" width="1440" height="1120" loading="lazy" decoding="async" alt="Ledger revenue dashboard with sample wallet balances, a revenue chart, and transactions" /></div></div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">02 / Data &amp; dashboards</span><h3 id="ledger-title">Ledger</h3></div>
+              <div class="work-project__summary"><p>A revenue dashboard bringing wallet summaries, charts, and transactions together.</p><p class="work-project__contribution"><span>My contribution</span>Revenue views, charts &amp; transaction UI.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>TypeScript</li><li>Recharts</li></ul></div>
+              <div class="work-project__links"><a href="https://mainstack-dashboard-eta.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View the Ledger demo (opens in a new tab)">View demo <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/mainstack-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Ledger on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+
+          <article class="work-project" aria-labelledby="logistics-title">
+            <a class="work-project__visual work-project__visual--logistics" href="https://logistics-dashboard-black.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Explore the Kiki Logistics dashboard demo (opens in a new tab)">
+              <div class="work-project__image-window"><div class="work-project__image-motion"><img class="work-project__image" src="/assets/images/kiki-logistics.png" width="636" height="581" loading="lazy" decoding="async" alt="Kiki Logistics dashboard concept showing shipment charts and a vehicle status list" /></div></div>
+              <span class="work-project__visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="work-project__meta">
+              <div class="work-project__identity"><span class="work-project__number">03 / Fleet &amp; operations</span><h3 id="logistics-title">Kiki Logistics</h3></div>
+              <div class="work-project__summary"><p>A logistics dashboard concept for fleet overview, vehicle status, and everyday operations.</p><p class="work-project__contribution"><span>My contribution</span>Fleet overview &amp; vehicle status views.</p><ul class="work-project__stack" aria-label="Technologies"><li>React</li><li>Chart.js</li><li>styled-components</li></ul></div>
+              <div class="work-project__links"><a href="https://logistics-dashboard-black.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View the Kiki Logistics demo (opens in a new tab)">View demo <span aria-hidden="true">↗</span></a><a href="https://github.com/okikioriola1/logistics-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Kiki Logistics on GitHub (opens in a new tab)">GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
         </div>
 
-        <div class="projects">
-          <div class="project-top">
-            <div class="single-project">
-              <div class="project-banner">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a
-                      href="https://logistics-dashboard-black.vercel.app"
-                      target="_blank"
-                      >VIEW LIVE SITE</a
-                    >
-                  </div>
-                </div>
-                <img src="assets/images/kiki-logistics.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Kiki Logistics</h1>
-                </div>
-                <div class="right">
-                  <p>Logistics app dashboard system</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="single-project">
-              <div class="project-banner evo">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a
-                      href="https://gym-app-eight-beta.vercel.app/"
-                      target="_blank"
-                      >VIEW LIVE SITE</a
-                    >
-                  </div>
-                </div>
-                <img src="assets/images/evo-gym.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>EvoGym</h1>
-                </div>
-                <div class="right">
-                  <p>A fitness App</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-top">
-            <div class="single-project">
-              <div class="project-banner">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://spendituree.vercel.app/" target="_blank"
-                      >VIEW LIVE SITE</a
-                    >
-                  </div>
-                </div>
-                <img src="assets/images/spenditure.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Spenditure</h1>
-                </div>
-                <div class="right">
-                  <p>
-                    A simplified way to take charge and control your finances
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="single-project">
-              <div class="project-banner">
-                <div class="overlay">
-                  <div class="view-site">
-                    <a href="https://skin-buddy.vercel.app/">VIEW LIVE SITE</a>
-                  </div>
-                </div>
-                <img src="assets/images/skin-buddy.png" />
-              </div>
-              <div class="project-text">
-                <div class="left">
-                  <h1>Skin Buddy</h1>
-                </div>
-                <div class="right">
-                  <p>Get your desired skin</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <footer class="selected-work__footer">
+          <p>More experiments, interfaces &amp; ideas.</p>
+          <a class="selected-work__more" href="./projects.html">More projects <span aria-hidden="true">↗</span></a>
+        </footer>
       </section>
-
-      <!-- End of featured projects -->
 
       <!-- Start of collaborated projects -->
 

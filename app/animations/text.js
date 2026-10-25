@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export const split = () => {
+export const split = ({ deferSlideIn = null, deferImages = null, deferParagraphs = null } = {}) => {
   const p = document.querySelectorAll("[data-animation='paragraph']");
   const H = document.querySelectorAll("[data-animation='header']");
   const f = document.querySelectorAll("[data-animation='fadeInOut']");
@@ -40,6 +40,8 @@ export const split = () => {
 
       transformStyle: "preserve-3d",
     });
+    if (deferParagraphs && item.matches(deferParagraphs)) return;
+
     IO(item, { threshold: 1}).then(() => {
       const elem = item.querySelectorAll(".word");
       gsap.to(elem, {
@@ -103,6 +105,8 @@ export const split = () => {
 
   // This was added for this project
   img.forEach((item) => {
+    if (deferImages && item.matches(deferImages)) return;
+
     gsap.set(item, {
       opacity: 0,
       yPercent: 20,
@@ -135,6 +139,9 @@ export const split = () => {
   });
 
   slideIn.forEach((item) => {
+    // The intro timeline reveals these elements after the loader clears.
+    if (deferSlideIn && item.matches(deferSlideIn)) return;
+
     gsap.set(item, {
       opacity: 0,
       yPercent: 30,

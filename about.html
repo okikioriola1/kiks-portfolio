@@ -5,7 +5,8 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiks</title>
+    <title>About — Okiki Oriola / Kiks</title>
+    <meta name="description" content="Meet Okiki Oriola, a software engineer with a background in product and developer relations. Code, curiosity, and a little Chelsea FC." />
   </head>
   <body data-barba="wrapper">
     <div class="cursor"></div>
@@ -18,7 +19,7 @@
       </h1>
     </div>
 
-    <main data-barba="container" data-barba-namespace="home">
+    <main class="about-page" data-barba="container" data-barba-namespace="about">
       <section class="menu" id="fullpageMenu">
         <div class="menu__wrapper" id="fullpageMenuInner">
           <div class="navbar">
@@ -33,10 +34,10 @@
             <div class="nav-right">
               <div class="nav-links">
                 <div class="menu-container">
-                  <a id="menuToggle"
+                  <button type="button" data-menu-toggle aria-controls="fullpageMenu" aria-expanded="false"
                     >Close
-                    <img src="assets/icons/close-icon.svg" />
-                  </a>
+                    <img src="assets/icons/close-icon.svg" alt="" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -97,264 +98,86 @@
             >
             <a href="mailto:okikioriola1@gmail.com" target="_blank">Contact</a>
             <div class="menu-container">
-              <a id="menuToggle"
+              <button type="button" data-menu-toggle aria-controls="fullpageMenu" aria-expanded="false"
                 >Menu
-                <img src="assets/icons/menu-icon.svg" />
-              </a>
+                <img src="assets/icons/menu-icon.svg" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </nav>
 
-      <!-- Start of the about section -->
-
-      <!-- Start of the about hero section -->
-
-      <section class="about">
-        <div class="left">
-          <div class="underlined-words">
-            <h4 data-animation="slideIn">About</h4>
-          </div>
+      <section class="profile-hero profile-width" aria-labelledby="profile-title">
+        <div class="profile-hero__copy">
+          <p class="profile-label" data-profile-intro>01 / A little about me</p>
+          <h1 id="profile-title" class="profile-hero__title">
+            <span class="profile-line"><span>I’m Okiki.</span></span>
+            <span class="profile-line"><span>Curious by nature.</span></span>
+            <span class="profile-line"><span class="profile-hero__soft">Creative by code.</span></span>
+          </h1>
+          <p class="profile-hero__intro" data-profile-intro>A software engineer with a product mindset and a soft spot for thoughtful interfaces. You can call me Kiks.</p>
+          <a class="profile-link" href="#profile-story" data-profile-intro>A little more about me <span aria-hidden="true">↓</span></a>
         </div>
+        <figure class="profile-hero__portrait">
+          <div class="profile-hero__image"><img src="/assets/images/okiki-peerless.jpg" width="1350" height="1800" alt="Okiki Oriola at a Peerless event, wearing glasses and a black shirt" fetchpriority="high" decoding="async" /></div>
+          <figcaption><span>Okiki Oriola</span><span>Engineer. Problem solver. Chelsea fan.</span></figcaption>
+        </figure>
+        <div class="profile-hero__bottom" data-profile-intro><span>Code / Product / People</span><span>Scroll to get to know me <span aria-hidden="true">↘</span></span></div>
+      </section>
 
-        <div class="center">
-          <div class="hero-word-container">
-            <h1 id="hero-text-1">Unveiling the</h1>
-          </div>
-          <div class="hero-word-container">
-            <h1 id="hero-text-2">Wizard</h1>
-          </div>
-          <div class="hero-word-container">
-            <h1 id="hero-text-1">Behind the</h1>
-          </div>
-          <div class="hero-word-container">
-            <h1 id="hero-text-2">Code</h1>
-          </div>
-        </div>
-
-        <div class="right">
-          <div class="hero-right">
-            <h2 data-animation="paragraph">
-              meet okiki, front-end enthusiast and the Chelsea FC supporter
-            </h2>
+      <section class="profile-story profile-width profile-section" id="profile-story" aria-labelledby="story-title">
+        <p class="profile-label" data-profile-reveal>02 / The way I see it</p>
+        <div>
+          <h2 class="profile-heading" id="story-title" data-profile-reveal>Good interfaces start with<br /> understanding people.</h2>
+          <div class="profile-story__text" data-profile-reveal>
+            <p>I enjoy turning ideas into websites and applications that feel good to use. The details matter to me: how a layout adapts, how an interaction responds, and how someone finds their way through a product.</p>
+            <p>My experience spans frontend development, technical product work, and developer relations. That means I’m interested in both sides of the screen: building the interface, understanding the product behind it, and helping the developers working with it.</p>
           </div>
         </div>
       </section>
 
-      <!-- End of the about hero section -->
-
-      <!-- Start of the about info section -->
-
-      <section class="about-info">
-        <div class="about-info-wrapper">
-          <div class="about-image">
-            <img data-animation="img" src="assets/images/about.png" />
-          </div>
-
-          <div class="info">
-            <div class="header">
-              <h1>Hey there! I'm Okiki, a passionate front-end enthusiast</h1>
-            </div>
-
-            <div class="text">
-              <p>
-                I am on a mission to turn pixels into mesmerizing digital
-                experiences. Ever since I tapped into the world of web
-                development, I've been captivated by the magic of
-                <span class="grey-p">
-                  crafting beautiful and functional user interfaces</span
-                >. From the initial sketch to the final line of code, I thrive
-                on the creative process that breathes life into websites and
-                applications.
-              </p>
-
-              <p>
-                As a Technical Product Specialist, I take my passion for
-                development a step further.<span class="grey-p"> Beyond the aesthetics and
-                functionality, I delve deep into the intricate architecture of
-                digital products</span>, understanding their inner workings and how
-                they align with the overall product vision. Furthermore, my experience as a Developer Relations
-                Engineer adds another layer to my skill set. I'm not just a
-                developer; <span class="grey-p">I'm a bridge between developers and solutions. I
-                understand the challenges developers face</span>, and I'm here to
-                provide the guidance and support they need to overcome
-                obstacles, <span class="grey-p">troubleshoot issues</span> ,and unlock the full potential of
-                their projects.
-              </p>
-
-              <p>
-                With a <span class="grey-p"> keen eye for detail </span> and an
-                <span class="grey-p"> unwavering commitment to perfection </span
-                >, I meticulously bring designs to life, ensuring every element
-                dances harmoniously across screens of all sizes. Front-end development is not just my profession;
-                it's a playground where
-                <span class="grey-p">imagination </span> meets
-                <span class="grey-p">innovation </span>.I am driven by a relentless desire to create <span class="grey-p"> digital experiences</span>
-                that not only meet industry standards but push the boundaries of
-                what is possible, all while providing invaluable support to fellow
-                developers on their journey to excellence.
-              </p>
-             
-            </div>
-          </div>
+      <section class="profile-craft profile-width profile-section" aria-labelledby="craft-title">
+        <div class="profile-section__intro"><p class="profile-label" data-profile-reveal>03 / What I bring</p><h2 class="profile-heading" id="craft-title" data-profile-reveal>From the big picture<br /> to the little details.</h2></div>
+        <div class="profile-craft__list">
+          <article class="profile-craft__row" data-profile-reveal><span class="profile-index">01</span><h3>Interfaces with intent.</h3><p>Responsive layouts, considered interactions, and motion that gives an interface character.</p></article>
+          <article class="profile-craft__row" data-profile-reveal><span class="profile-index">02</span><h3>A product perspective.</h3><p>Looking beyond individual screens to understand the problem and how the pieces fit together.</p></article>
+          <article class="profile-craft__row" data-profile-reveal><span class="profile-index">03</span><h3>A developer’s ally.</h3><p>Making technical ideas clearer, troubleshooting problems, and helping developers move forward.</p></article>
         </div>
       </section>
 
-      <!-- End of the about info section -->
-
-      <!--start of tools section -->
-
-      <section class="tools-section">
-        <div class="underlined-words">
-          <h4>Tools & Technologies</h4>
-        </div>
-
-        <div class="tools">
-          <div class="hero-word-container">
-            <h1 id="hero-text-1">
-              Html, CSS, JavaScript, React, Next, Typescript, Vercel, Git,
-            </h1>
-          </div>
-          <div class="hero-word-container">
-            <h1 id="hero-text-2">GitHub, MongoDB, Prisma, Netlify, GSAP, AntDesign, Material UI, Tailwind</h1>
-          </div>
+      <section class="profile-experience" aria-labelledby="experience-title">
+        <div class="profile-width">
+          <div class="profile-experience__heading" data-profile-reveal><p class="profile-label">04 / Along the way</p><h2 class="profile-heading" id="experience-title">Places I’ve contributed.</h2></div>
+          <ol class="profile-experience__list">
+            <li class="profile-role" data-profile-reveal><span class="profile-index">01</span><h3>Peerless</h3><div><p>Senior Software Engineer</p><span>Feb 2024 — Present</span></div></li>
+            <li class="profile-role" data-profile-reveal><span class="profile-index">02</span><h3>Paystack</h3><div><p>Technical Product Specialist</p><span>Aug 2022 — Present</span></div></li>
+            <li class="profile-role" data-profile-reveal><span class="profile-index">03</span><h3>Cogenie Tech</h3><div><p>Front-end Developer</p><span>May 2022 — Jan 2023</span></div></li>
+            <li class="profile-role" data-profile-reveal><span class="profile-index">04</span><h3>Arnergy</h3><div><p>Embedded Systems Engineer</p><span>Jul 2021 — Dec 2021</span></div></li>
+          </ol>
+          <a class="profile-link" href="https://drive.google.com/file/d/1XYf_ZixMV2_64oG6Oqn4TP1eSx36dlEh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View my résumé <span aria-hidden="true">↗</span><span class="profile-sr-only"> (opens in a new tab)</span></a>
         </div>
       </section>
 
-      <!--end of tools section -->
-
-      <!--start of work experience section -->
-
-      <section class="work-experience-section">
-        <div class="underlined-words">
-          <h4>Work Experience</h4>
-        </div>
-
-        <div class="work-experience">
-          <div class="work">
-            <div class="number">
-              <p>o1.</p>
-            </div>
-            <div class="company">
-              <h1 data-animation="paragraph">Paystack</h1>
-            </div>
-            <div class="duration">
-              <h4 data-animation="paragraph">
-                Developer Relations (Aug 2022 – Present)
-              </h4>
-            </div>
-          </div>
-
-          <div class="work">
-            <div class="number">
-              <p>o2.</p>
-            </div>
-            <div class="company">
-              <h1 data-animation="paragraph">Cogenie Tech</h1>
-            </div>
-            <div class="duration">
-              <h4 data-animation="paragraph">
-                Front-end Developer (May 2022 – Jan 2023)
-              </h4>
-            </div>
-          </div>
-
-          <div class="work">
-            <div class="number">
-              <p>o3.</p>
-            </div>
-            <div class="company">
-              <h1 data-animation="paragraph">Arnergy</h1>
-            </div>
-            <div class="duration">
-              <h4 data-animation="paragraph">
-                Embedded Systems Engineer (July 2021 – December 2021)
-              </h4>
-            </div>
-          </div>
-
-          <div class="work">
-            <div class="number">
-              <p>o4.</p>
-            </div>
-            <div class="company">
-              <h1 data-animation="paragraph">Yudimy</h1>
-            </div>
-            <div class="duration">
-              <h4 data-animation="paragraph">
-                Front-end Developer (Feb 2021 – July 2021)
-              </h4>
-            </div>
-          </div>
+      <section class="profile-toolkit profile-width profile-section" aria-labelledby="toolkit-title">
+        <div><p class="profile-label" data-profile-reveal>05 / In my toolkit</p><h2 class="profile-heading" id="toolkit-title" data-profile-reveal>The tools behind<br /> the work.</h2></div>
+        <div class="profile-toolkit__groups">
+          <div data-profile-reveal><h3>Frontend</h3><ul><li>HTML &amp; CSS</li><li>JavaScript &amp; TypeScript</li><li>React &amp; Next.js</li></ul></div>
+          <div data-profile-reveal><h3>Styling &amp; motion</h3><ul><li>Tailwind CSS</li><li>GSAP</li><li>Ant Design &amp; Material UI</li></ul></div>
+          <div data-profile-reveal><h3>Data &amp; workflow</h3><ul><li>MongoDB &amp; Prisma</li><li>Git &amp; GitHub</li></ul></div>
+          <div data-profile-reveal><h3>Delivery &amp; cloud</h3><ul><li>Docker &amp; Docker Compose</li><li>GitHub Actions</li><li>Linux &amp; Bash</li><li>Terraform</li><li>Vercel &amp; Netlify</li></ul></div>
         </div>
       </section>
 
-      <!--start of work experience section -->
-
-      <section class="banner">
-        <div class="banner-image">
-          <img src="assets/images/about-2.png" />
-        </div>
-
-        <div class="banner-text">
-          <p data-animation="paragraph">
-            When I'm not deeply engaged in the realm of front-end wizardry,
-            you'll frequently discover me enjoying my favorite pastimes –
-            gaming, watching football, and binge-watching series,
-          </p>
-
-          <p data-animation="paragraph">
-            From thrilling football matches to captivating series, I'm a
-            dedicated enthusiast. When I'm not deeply involved in coding, you'll
-            likely find me immersed in the excitement of watching football games
-            and analyzing football or engrossed in binge-watching series.
-          </p>
-        </div>
+      <section class="profile-offline profile-width" aria-labelledby="offline-title">
+        <div class="profile-offline__image" data-profile-reveal><img src="/assets/images/okiki-chelsea.jpg" width="1199" height="1312" alt="Okiki taking a mirror selfie in his Chelsea football shirt" loading="lazy" decoding="async" /></div>
+        <div class="profile-offline__copy" data-profile-reveal><p class="profile-label">06 / Away from the keyboard</p><h2 class="profile-heading" id="offline-title">There’s life<br /> outside the browser.</h2><p>Usually a Chelsea match, a gaming session, or one more episode of a series. I’m always up for a little football banter, too.</p><span class="profile-offline__note">Yes, still Chelsea. Through it all.</span></div>
       </section>
 
-      <footer class="footer">
-        <div class="footer-top">
-          <div class="footer-header">
-            <h1>let’s collaborate.</h1>
-          </div>
-          <div class="footer-text">
-            <p>
-              Hey there! Ready to embark on an epic coding journey together?
-              Whether you have a project idea, need web assistance, or just want
-              to chat about code, I'm all ears!
-              <span
-                ><a href="#"
-                  >Contact me<span
-                    ><img src="assets/icons/footer-icon.svg" /></span></a
-              ></span>
-              to start crafting digital magic together!
-            </p>
-            <p></p>
-
-            <p>
-              Oh, and by the way, if you're a football fan like me, let's take a
-              break from coding and geek out over our favorite football clubs
-              and players and also banter each other. Drop me a line, and we can
-              have a virtual coffee (or tea) while chatting about code and the
-              fantastic world of football. Can't wait to hear from you!
-            </p>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="footer-links">
-            <div class="social-link email-link"><a class="email" href="mailto:okikioriola1@gmail.com">Email</a></div>
-            <div class="social-link linkedin-link"><a class="linkedin" href="https://www.linkedin.com/in/okikijesu-oriola-b0b296197">LinkedIn</a></div>
-            <div class="social-link github-link"><a class="github" href="https://github.com/okikioriola1">Github</a></div>
-            <div class="social-link twitter-link"><a class="twitter"  href="https://twitter.com/young_okj">Twitter</a></div>
-            <div class="social-link instagram-link"><a class="instagram" href="https://www.instagram.com/young_okj/">Instagram</a></div>
-          </div>
-          <div class="design-by">
-            <p>Design by <span class="grey-p"><a href="mailto:ebubeeneh@gmail.com">Ebube</a></span></p>
-          </div>
-        </div>
+      <footer class="profile-contact profile-width">
+        <p class="profile-label" data-profile-reveal>Have an idea? Let’s talk.</p>
+        <a class="profile-contact__headline" href="mailto:okikioriola1@gmail.com" data-profile-reveal><span>Let’s make<br /> something good.</span><span aria-hidden="true">↗</span></a>
+        <div class="profile-contact__bottom"><a href="mailto:okikioriola1@gmail.com">okikioriola1@gmail.com</a><div><a href="https://github.com/okikioriola1" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="profile-sr-only"> (opens in a new tab)</span></a><a href="https://www.linkedin.com/in/okikijesu-oriola-b0b296197" target="_blank" rel="noopener noreferrer">LinkedIn ↗<span class="profile-sr-only"> (opens in a new tab)</span></a><a href="./home.html">Back home ↗</a></div><span>Okiki Oriola / Kiks</span></div>
       </footer>
-      <!-- End of footer projects -->
     </main>
 
     <script type="module" src="/main.js"></script>

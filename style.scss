@@ -9,8 +9,11 @@
 
 
 @import "./styles/base/base";
+@import "./styles/shared/intro";
 
 
 @import "./styles/pages/home";
 @import "./styles/pages/about";
 @import "./styles/pages/projects";
+@import "./styles/shared/selected-work";
+@import "./styles/shared/project-gallery";
