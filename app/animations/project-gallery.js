@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { createScrollRefresh } from "./scroll-refresh";
 import { clampProgress, nearestProject, projectScrollPosition } from "./gallery-position";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,8 +19,8 @@ export function animateProjectGallery(container = document, ready = Promise.reso
   const current = gallery.querySelector("[data-gallery-current]");
   const progress = gallery.querySelector(".project-gallery__progress");
   const fill = progress.firstElementChild;
-  const hint = gallery.querySelector(".project-gallery__hint");
   let active = true;
+  const refresh = createScrollRefresh(() => active && page.isConnected);
   const media = gsap.matchMedia();
 
   // Rebuild the pin when the card layout changes, including phone rotation.
@@ -92,7 +93,6 @@ export function animateProjectGallery(container = document, ready = Promise.reso
       hero.play();
       gallery.classList.add("is-horizontal");
       navigation.hidden = false;
-      hint.innerHTML = 'Scroll to explore <span aria-hidden="true">↓</span>';
       if (distance() > 0) {
         horizontal = gsap.to(track, {
           x: () => -distance(), ease: "none",
@@ -110,7 +110,7 @@ export function animateProjectGallery(container = document, ready = Promise.reso
       viewport.addEventListener("keydown", onKey);
       gallery.querySelector(".project-gallery__skip").addEventListener("click", onSkip);
       update(0);
-      ScrollTrigger.refresh();
+      refresh.request();
     });
     ready.then(() => { if (active && mounted && page.isConnected) context.startGallery(); });
 
@@ -129,8 +129,8 @@ export function animateProjectGallery(container = document, ready = Promise.reso
   }, page);
 
   // Images have fixed dimensions; refresh again for font wrapping and late decodes.
-  Promise.allSettled([document.fonts?.ready, ...Array.from(track.querySelectorAll("img"), img => img.decode?.())]).then(() => {
-    if (active && page.isConnected) ScrollTrigger.refresh();
+  Promise.allSettled([ready, document.fonts?.ready, ...Array.from(track.querySelectorAll("img"), img => img.decode?.())]).then(() => {
+    refresh.request();
   });
-  return () => { active = false; media.revert(); };
+  return () => { active = false; refresh.cancel(); media.revert(); };
 }

@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { createScrollRefresh } from "./scroll-refresh";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,6 +9,7 @@ export function animateAbout(container = document, ready = Promise.resolve()) {
   if (!page) return () => {};
 
   let active = true;
+  const refresh = createScrollRefresh(() => active && page.isConnected);
   const media = gsap.matchMedia();
   media.add("(prefers-reduced-motion: no-preference)", context => {
     let mounted = true;
@@ -28,7 +30,7 @@ export function animateAbout(container = document, ready = Promise.resolve()) {
         );
         reveals.set(element, tween);
       });
-      ScrollTrigger.refresh();
+      refresh.request();
     });
     ready.then(() => { if (active && mounted && page.isConnected) context.revealPage(); });
 
@@ -48,6 +50,8 @@ export function animateAbout(container = document, ready = Promise.resolve()) {
     };
   }, page);
 
-  document.fonts?.ready.then(() => { if (active && page.isConnected) ScrollTrigger.refresh(); });
-  return () => { active = false; media.revert(); };
+  Promise.allSettled([ready, document.fonts?.ready]).then(() => {
+    refresh.request();
+  });
+  return () => { active = false; refresh.cancel(); media.revert(); };
 }

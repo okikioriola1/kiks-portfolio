@@ -1,0 +1,9 @@
+// SVG paths keep arrows monochrome on iOS, independent of emoji fonts.
+.icon-arrow {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -.15em;
+  pointer-events: none;
+}

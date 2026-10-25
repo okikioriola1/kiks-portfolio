@@ -49,7 +49,10 @@ function setup() {
       return { ...tween(), fromTo() { return this; } };
     },
   };
-  const sandbox = { gsap, ScrollTrigger: { refresh: () => refreshes++ }, document: { fonts: { ready: Promise.resolve() } } };
+  const sandbox = {
+    gsap, ScrollTrigger: {}, document: { fonts: { ready: Promise.resolve() } },
+    createScrollRefresh: isActive => ({ request() { if (isActive()) refreshes++; }, cancel() {} }),
+  };
   vm.runInNewContext(source, sandbox);
   let finishTransition;
   const ready = new Promise(resolve => { finishTransition = resolve; });

@@ -15,6 +15,9 @@ import { forEach } from "lodash";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import barba from "@barba/core";
 gsap.registerPlugin(ScrollTrigger);
+// Safari's collapsing address bar changes viewport height during a swipe.
+// Keep native touch scrolling stable; real resizes and rotation still refresh.
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 // Page transitions own scroll positioning, including Back/Forward navigation.
 if ("scrollRestoration" in window.history) {
